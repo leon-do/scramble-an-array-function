@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		var myArray = ["apple", "bananna", "carrot","doughnut","elephant"]
+
+		scramble(myArray)
+
+		function scramble(oldArray){
+			var newArray = []
+			var lengthArray = oldArray.length;
+			var randomIndex
+			var splicedArray
+
+			while (lengthArray > 0) {
+				randomIndex = Math.floor(Math.random() * lengthArray);
+				splicedArray = String(oldArray.splice(randomIndex,1))
+				newArray.push(splicedArray)
+				lengthArray--
+			}
+
+			console.log(newArray)
+			return newArray
+		}
+	</script>
+</body>
+</html>
