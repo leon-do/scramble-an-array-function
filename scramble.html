@@ -10,15 +10,29 @@
 		scramble(myArray)
 
 		function scramble(oldArray){
-			var newArray = []
+			// container to store the scrambled array
+			var newArray = [];
+
+			// getting lenth of oldArray
 			var lengthArray = oldArray.length;
-			var randomIndex
-			var splicedArray
+
+			// generate a random number
+			var randomIndex;
+
+			// a value from the oldArray
+			var splicedArray;
 
 			while (lengthArray > 0) {
+				// generate a random number
 				randomIndex = Math.floor(Math.random() * lengthArray);
+
+				// splice the oldArray at a random location
 				splicedArray = String(oldArray.splice(randomIndex,1))
+
+				// put the spliced value into the new array
 				newArray.push(splicedArray)
+
+				// shorten the length array by 1
 				lengthArray--
 			}
 
